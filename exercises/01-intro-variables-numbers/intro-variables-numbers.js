@@ -1,10 +1,11 @@
 function myName() {
   // Create a variable called myName
+  const myName = 'Jahari';
   return myName;
 }
 
 function setTeachersNames(teachersName) {
-  const teachers = null; // Change this line only
+  let teachers = 'null'; // Change this line only
   teachers = teachersName; //  <- this is invalid because teachers is a const
 
   return teachers;
@@ -12,25 +13,30 @@ function setTeachersNames(teachersName) {
 
 /*** return the sum of both arguments  ***/
 function add(a, b) {
-  let sum;
 
+
+  let sum;
+sum = a+b;
   return sum;
 }
 
 /*** Using the increment operator, add a year to the argument and make me older */
 function ageMeByAYear(age) {
+age++;
   return age;
 }
 
 /*** Using the decrement operator make me age decrement by a year  ***/
 function makeMeYoungerByAYear(age) {
+  age--;
   return age;
 }
 
 /** Take the argument that will be a string and return an integer  */
 function convertStringToInt(str) {
-  let int;
-  return int;
+  const nameString="Jahari";
+  console.log(nameString);
+  return parseInt(str);
 }
 
 /*** Using the String method indexOf find the first position of the letter in the name  */
@@ -43,14 +49,25 @@ function convertStringToInt(str) {
  *
  */
 function getTheCharacterPosition(name, letter) {
-  let characterPosition;
+  let characterPosition = name.indexOf(letter);
+
+
+  
   return characterPosition;
 }
 
 /** Take the argument and return the length of the argument */
 
 function stringLength(str) {
-  let strLength;
+  let strLength = "James";
+  strLength = str.length;
+  console.log()
+
+
+
+
+
+
 
   return strLength;
 }
@@ -63,7 +80,8 @@ function stringLength(str) {
  */
 
 function getLastCharacter(str) {
-  let lastCharacter;
+  let lastCharacter = str;
+  lastCharacter = str[str.length-1];
 
   return lastCharacter;
 }
@@ -81,7 +99,9 @@ function getLastCharacter(str) {
  */
 
 function getLastWordInPlaceName(place) {
-  let newPlace;
+  let oldPlace = place;
+  let index = place.indexOf(" ");
+  let newPlace = oldPlace.substring(index+1);
 
   return newPlace;
 }
@@ -99,7 +119,12 @@ function getLastWordInPlaceName(place) {
  */
 
 function replaceLastName(fullName, newLastName) {
-  let newFullName;
+  let myString  = fullName;
+  let newFullName = myString.replace(fullName,newLastName);
+
+
+
+
   return newFullName;
 }
 
@@ -109,7 +134,7 @@ function replaceLastName(fullName, newLastName) {
  */
 
 function capitalizeLastName(fullName) {
-  let capitalizeLastName;
+  let capitalizeLastName = fullName.substring(0,5) + fullName[5].toUpperCase()+fullName.substring(6);
 
   return capitalizeLastName;
 }
