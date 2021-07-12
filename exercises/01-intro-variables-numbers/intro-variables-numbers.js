@@ -134,7 +134,11 @@ function replaceLastName(fullName, newLastName) {
  */
 
 function capitalizeLastName(fullName) {
-  let capitalizeLastName = fullName.substring(0,5) + fullName[5].toUpperCase()+fullName.substring(6);
+  const index = fullName.indexOf("");
+  console.log(index);
+  let lastName = fullName.substring(index +1);
+  let capLastName = lastName.replace(lastName[0],lastName[0].toUpperCase());
+  let capitalizeLastName = fullName.replace(lastName, capLastName);
 
   return capitalizeLastName;
 }
