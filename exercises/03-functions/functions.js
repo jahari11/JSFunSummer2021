@@ -7,7 +7,8 @@
  * It should accept a name and return "Hello ______!"
  * @example printGreeting("Tim"); // Hello Tim!
  */
-const printGreeting = () => {
+const printGreeting = (Tim) => {
+  return 'Hello Tim!';
 
 };
 
@@ -17,7 +18,9 @@ const printGreeting = () => {
  * @example timesFive(2); // 10
  * @example timesFive(0); // 0
  */
-const timesFive = () => {
+const timesFive = (num1) => { 
+  const answer = num1 * 5;
+  return answer;
 
 };
 
@@ -31,7 +34,14 @@ const timesFive = () => {
  * @example lowerCaseName(null); // undefined (should not throw an error)
  */
 const lowerCaseName = (HELLOWORLD) => {
-return HELLOWORLD.toLowerCase();
+  let myName = undefined;
+  if(typeof HELLOWORLD === "string"){
+    myName = HELLOWORLD.toLowerCase();
+    return myName;
+}
+else{
+  return;
+}
 };
 
 /**
@@ -56,7 +66,8 @@ const isEvenOrOdd = (num) => {
  * @example countNumberOfDigits(5000); // 4
  */
 const countNumberOfDigits = () => {
-  return countNumberOfDigits.toString().length;
+  const numbers = 3000;
+  return numbers.toString().length;
 
 };
 

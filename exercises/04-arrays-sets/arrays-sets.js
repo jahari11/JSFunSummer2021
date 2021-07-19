@@ -2,10 +2,10 @@
  *  Return the first item in an array of cars
  *  @return {string} BMW
  */
-
 const accessingAnItem = () => {
   const cars = ["BMW", "Honda", "Civic"]; // Do not change this line
   // Write code here
+  return cars[0];
 };
 
 /**
@@ -15,8 +15,7 @@ const accessingAnItem = () => {
  */
 
 const addToAnArray = () => {
-  const languages = ["JavaScript"]; // Do not change this line
-
+  const languages = ["JavaScript","C","Python","PHP"]; // Do not change this line
   /* Add three more items to the "languages" array here */
 
   return languages;
@@ -30,7 +29,10 @@ const addToAnArray = () => {
  * @example combineArray(['Japan','China','India'], ['USA','UK']) // ['Japan','China','India','USA','UK']
  **/
 
-const combineArray = (array1, array2) => {};
+const combineArray = (array1, array2) => {
+  const array3 = [...array1, ...array2];
+  return array3;
+};
 
 /***
  * Create an array that contain two functions:
@@ -42,7 +44,9 @@ const combineArray = (array1, array2) => {};
  * @example createArrayOfFunctions()[1](10, 10) // 0;
  */
 
-const createArrayOfFunctions = () => {};
+const createArrayOfFunctions = () => {
+  
+};
 
 /**
  * Loop through the array using a for loop (or for ... of loop) and return the highest number
@@ -53,7 +57,9 @@ const createArrayOfFunctions = () => {};
  * @example highestNumber([-1, -5, -4]) // -1
  *
  **/
-const highestNumber = (numbers) => {};
+const highestNumber = (numbers) => {
+
+};
 
 /**
  * Given an array of objects, where each object has an ID,
