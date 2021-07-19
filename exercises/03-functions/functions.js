@@ -7,6 +7,9 @@
  * It should accept a name and return "Hello ______!"
  * @example printGreeting("Tim"); // Hello Tim!
  */
+const printGreeting = () => {
+
+};
 
 /**
  * Create a function named "timesFive". It should multiply a number by 5.
@@ -14,6 +17,9 @@
  * @example timesFive(2); // 10
  * @example timesFive(0); // 0
  */
+const timesFive = () => {
+
+};
 
 /**
  * Create a function called "lowerCaseName".
@@ -24,6 +30,9 @@
  * @example lowerCaseName(); // undefined (should not throw an error)
  * @example lowerCaseName(null); // undefined (should not throw an error)
  */
+const lowerCaseName = (HELLOWORLD) => {
+return HELLOWORLD.toLowerCase();
+};
 
 /**
  * Create a function called "isEvenOrOdd".
@@ -32,12 +41,24 @@
  * @example isEvenOrOdd(10); // even
  * @example isEvenOrOdd(3); // odd
  */
+const isEvenOrOdd = (num) => {
+  if (num*10){
+  return "even";
+} else {
+  return "odd";
+}
+
+};
 
 /**
  * Create a function called "countNumberOfDigits".
  * Given an integer, it should return the number of digits in an integer.
  * @example countNumberOfDigits(5000); // 4
  */
+const countNumberOfDigits = () => {
+  return countNumberOfDigits.toString().length;
+
+};
 
 /**
  * Ignore everything below this line. This is for the tests.
