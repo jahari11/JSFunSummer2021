@@ -21,7 +21,6 @@ const printGreeting = (Tim) => {
 const timesFive = (num1) => { 
   const answer = num1 * 5;
   return answer;
-
 };
 
 /**

@@ -45,7 +45,9 @@ const combineArray = (array1, array2) => {
  */
 
 const createArrayOfFunctions = () => {
-  
+  const results = () => {
+    const
+  };
 };
 
 /**
