@@ -105,16 +105,15 @@ return array1;
  */
 
 const findAndAbort = (arr, id) => {
-  let beGone = [arr,id];
-  for (const mySelf of beGone) 
-    if (mySelf===beGone){
+  let beGone;
+  for (let i = 0; i <arr.length; i++){
+    let mySelf = arr[i];
+    if (mySelf.id === id){
       beGone = mySelf;
       break;
     }
-return beGone;
-  
-
-
+  } 
+  return beGone;
 };
 
 /**
