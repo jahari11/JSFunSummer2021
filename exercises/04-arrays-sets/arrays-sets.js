@@ -45,10 +45,10 @@ const combineArray = (array1, array2) => {
  */
 
 const createArrayOfFunctions = () => {
-  const results = () => {
-    const
+  const array1 = (a,b) => a + b;
+  const array2 = (a,b) => a - b;
+  return [array1, array2];
   };
-};
 
 /**
  * Loop through the array using a for loop (or for ... of loop) and return the highest number
@@ -60,7 +60,12 @@ const createArrayOfFunctions = () => {
  *
  **/
 const highestNumber = (numbers) => {
-
+let array1 = numbers[1,2];
+for (const bigNumber of numbers){
+  if (bigNumber > array1) 
+  array1 = bigNumber;
+}
+return array1;
 };
 
 /**
@@ -99,7 +104,18 @@ const highestNumber = (numbers) => {
  * Please note, the loop never iterates over the last item, because we found our object. There is no need to continue looping.
  */
 
-const findAndAbort = (arr, id) => {};
+const findAndAbort = (arr, id) => {
+  let beGone = [arr,id];
+  for (const mySelf of beGone) 
+    if (mySelf===beGone){
+      beGone = mySelf;
+      break;
+    }
+return beGone;
+  
+
+
+};
 
 /**
  * Check to see if a string is a palindrome.
@@ -111,7 +127,18 @@ const findAndAbort = (arr, id) => {};
  * @example isPalindrome("nope"); // false
  */
 
-const isPalindrome = (str) => {};
+const isPalindrome = (str) => {
+let letters = str.split("");
+let reverseStr = "";
+for (let letter of letters) {
+  reverseStr = letter + reverseStr;
+
+}
+if (str===reverseStr){
+  return true;
+}
+else return false; 
+};
 
 /**
  * Use sets to remove duplicate elements from an array
@@ -123,7 +150,13 @@ const isPalindrome = (str) => {};
  * removeDuplicates(); // [2, 3, 4, 5, 6, 7, 32]
  */
 
-const removeDuplicates = (numbers) => {};
+const removeDuplicates = (numbers) => {
+  let noDup = [...new Set(numbers)];
+  return noDup;
+
+
+
+};
 
 export {
   addToAnArray,
