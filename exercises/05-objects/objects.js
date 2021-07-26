@@ -6,7 +6,15 @@
  * @return {object}
  */
 
-const createDogObject = () => {};
+const createDogObject = () => {
+  const myDog ={
+    name:"Boots",
+    legs:"4",
+    tails:"1",
+    owners:['hello','world']
+  };
+  return myDog;
+};
 
 /**
  *  CreateGraduateObject function takes in several arguments and combines them together in one object.
@@ -41,7 +49,21 @@ const createGraduateObject = (
   skills,
   githubLink,
   linkedInLink
-) => {};
+) => {
+  return {
+    name,
+    graduationYear,
+    skills,
+    links : {
+      github:githubLink,
+      linkedIn:linkedInLink
+    }
+
+
+    };
+
+  };
+
 
 /**
  * Return the value for hat inside of the clothes object
@@ -57,6 +79,7 @@ const accessAnItemObject = () => {
     shoes: "cleats",
   };
   // Write code here
+  return clothes.hat;
 };
 
 /**
@@ -79,6 +102,10 @@ const updateStudentObject = () => {
     skills: [],
   };
   // Write code here
+  student.firstName="Jahari";
+  student.lastName="Crawford";
+  student.skills.push("sleeping","eating","gaming");
+  return student;
 };
 
 /**
@@ -96,6 +123,7 @@ const returnObjectValues = () => {
     name: "Rocket",
   };
   // Add code here
+  return [...Object.values(dog)];
   // HINT: you need to return an array
 };
 
@@ -110,7 +138,12 @@ const returnObjectValues = () => {
  * combineObject(obj1, obj2); // { firstName: "Clark", lastName: "Kent" }
  */
 
-const combineObject = (obj1, obj2) => {};
+const combineObject = (obj1, obj2) => {
+  return { ...obj1,
+    ...obj2
+
+  };
+};
 
 export {
   createDogObject,

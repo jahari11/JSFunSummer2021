@@ -16,7 +16,16 @@
  *
  * user.email = "icanhascheeseburger@yahoo.com"; // This should not change newUser
  */
-const changeEmail = (user, newEmail) => {};
+
+const changeEmail = (user, newEmail) => {
+const newObject ={
+  id:'1234',
+  user:'lolcatz1',
+  email:'lolcatz1@gmail.com'
+};
+const newEmail = email;
+const userOne = {...newObject,}
+};
 
 /**
  * Add a new item to a shopping cart. You should deep copy any array and objects.
