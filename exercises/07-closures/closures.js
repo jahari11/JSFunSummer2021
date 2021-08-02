@@ -14,7 +14,19 @@
  *
  * (This is technically not a closure. It is here to prepare you for the next problems.)
  */
-const greeter = () => {};
+const greeter = () => {
+  const greeting={ 
+    hello:(name) =>{
+      
+      return "Hello "+name+"!";
+
+    }
+
+
+  };
+  return greeting;
+}; 
+
 
 /**
  * Use closures to complete this exercise.
@@ -26,6 +38,7 @@ const calculator = () => {
    * Create a private variable called "sum"
    * @var {number}
    */
+  let sum;
   /**
    * Return an object that has two methods:
    *
@@ -37,6 +50,15 @@ const calculator = () => {
    * that should return the value of "sum" above.
    * @returns {number} the value of sum
    */
+  return{
+    one:(number)=>{
+      return sum+number;
+    },
+    two:(number)=>{
+      return sum
+    }
+
+   };
 };
 
 /**
@@ -65,6 +87,23 @@ const calculator = () => {
  * guessRound2(1); // "No more guesses. The answer was 0"
  */
 
-const guessingGame = (numberOfRounds) => {};
+const guessingGame = (numberOfRounds) => {
+  const game = (rounds) => {
+    const answer = 5;
+    let guesses = 0;
+    return function gameRounds(guess){
+      if (guess===answer) {
+        return "You got it!";
+      }
+      guesses++;
+      if(guess>answer){
+        return "You're too high!";
+      }
+      else{
+        return "You're too low!";
+      }
+    };
+
+};
 
 export { greeter, calculator, guessingGame };
