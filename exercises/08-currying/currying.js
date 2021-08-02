@@ -18,7 +18,6 @@ const multiplier = (a, b) => {
     return a*b;
   }
   else {
-    return (a) => a*b;
   }
 };
 
